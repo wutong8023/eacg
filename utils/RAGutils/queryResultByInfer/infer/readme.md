@@ -1,0 +1,1 @@
+run_multi_worker_inference.sh 是用于多worker并行推理的脚本，需要指定worker数量和使用的GPU。(用于由context和query生成对应的answer)

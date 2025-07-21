@@ -1,0 +1,138 @@
+refcode测试失败，BigCodeBench/35的依赖{'matplotlib': '3.10.0', 'pandas': '2.2.3', 'python': '3.12', 'seaborn': '0.13.2'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EE.F..
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 31, in test_case_1
+    df1, ax = task_func(df)
+              ^^^^^^^^^^^^^
+TypeError: task_func() missing 1 required positional argument: 'target_values'
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 36, in test_case_2
+    df1, ax = task_func(df)
+              ^^^^^^^^^^^^^
+TypeError: task_func() missing 1 required positional argument: 'target_values'
+
+======================================================================
+FAIL: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 55, in test_case_4
+    self.assertEqual(len(ax.lines), 2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.191s
+
+FAILED (failures=1, errors=2)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/35的依赖{'matplotlib': '3.10.0', 'pandas': '2.2.3', 'python': '3.12', 'seaborn': '0.13.2'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EE.F..
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 28, in test_case_1
+    df1, ax = task_func(df)
+              ^^^^^^^^^^^^^
+TypeError: task_func() missing 1 required positional argument: 'target_values'
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 33, in test_case_2
+    df1, ax = task_func(df)
+              ^^^^^^^^^^^^^
+TypeError: task_func() missing 1 required positional argument: 'target_values'
+
+======================================================================
+FAIL: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 52, in test_case_4
+    self.assertEqual(len(ax.lines), 2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.285s
+
+FAILED (failures=1, errors=2)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/35的依赖{'matplotlib': '3.10.0', 'pandas': '2.2.3', 'python': '3.12', 'seaborn': '0.13.2'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EE.F..
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 28, in test_case_1
+    df1, ax = task_func(df)
+              ^^^^^^^^^^^^^
+TypeError: task_func() missing 1 required positional argument: 'target_values'
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 33, in test_case_2
+    df1, ax = task_func(df)
+              ^^^^^^^^^^^^^
+TypeError: task_func() missing 1 required positional argument: 'target_values'
+
+======================================================================
+FAIL: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 52, in test_case_4
+    self.assertEqual(len(ax.lines), 2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.362s
+
+FAILED (failures=1, errors=2)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+

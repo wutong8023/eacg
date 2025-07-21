@@ -1,0 +1,199 @@
+import os
+import sys
+import logging
+from datetime import datetime
+import io
+
+class TeeOutput:
+    """
+    自定义输出重定向类，同时写入文件和终端
+    """
+    def __init__(self, file_path, original_stream, encoding='utf-8'):
+        self.file_path = file_path
+        self.original_stream = original_stream
+        self.encoding = encoding
+        self.log_file = None
+        self._open_log_file()
+    
+    def _open_log_file(self):
+        """打开日志文件"""
+        try:
+            self.log_file = open(self.file_path, 'a', encoding=self.encoding, buffering=1)
+        except Exception as e:
+            print(f"无法打开日志文件 {self.file_path}: {e}")
+            self.log_file = None
+    
+    def write(self, text):
+        """写入文本到文件和原始流"""
+        # 写入到原始流（终端）
+        if self.original_stream:
+            self.original_stream.write(text)
+            self.original_stream.flush()
+        
+        # 写入到日志文件
+        if self.log_file:
+            try:
+                # 添加时间戳前缀（只对非空行添加）
+                if text.strip():
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    # 检查是否已经有时间戳（避免重复）
+                    if not text.startswith(timestamp[:10]):  # 检查日期前缀
+                        text = f"[{timestamp}] {text}"
+                
+                self.log_file.write(text)
+                self.log_file.flush()
+            except Exception as e:
+                print(f"写入日志文件时出错: {e}")
+    
+    def flush(self):
+        """刷新缓冲区"""
+        if self.original_stream:
+            self.original_stream.flush()
+        if self.log_file:
+            self.log_file.flush()
+    
+    def close(self):
+        """关闭日志文件"""
+        if self.log_file:
+            self.log_file.close()
+            self.log_file = None
+    
+    def __getattr__(self, name):
+        """代理其他属性到原始流"""
+        return getattr(self.original_stream, name)
+
+def setup_logging(args):
+    """
+    设置完整的日志配置，捕获所有终端输出到单个.log文件
+    """
+    # 创建日志根目录
+    log_base_dir = "logs"
+    os.makedirs(log_base_dir, exist_ok=True)
+    
+    # 创建带时间戳的日志子目录
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_dir = os.path.join(log_base_dir, f"train_lora_{args.dataset_type}_{timestamp}")
+    os.makedirs(log_dir, exist_ok=True)
+    
+    # 设置完整的日志文件路径
+    log_file = os.path.join(log_dir, f"train_lora_{args.dataset_type}_complete.log")
+    
+    # 在日志文件开头写入会话信息
+    with open(log_file, 'w', encoding='utf-8') as f:
+        f.write(f"=" * 80 + "\n")
+        f.write(f"LoRA训练完整日志 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"=" * 80 + "\n")
+        f.write(f"训练配置:\n")
+        f.write(f"  - dataset_type: {args.dataset_type}\n")
+        f.write(f"  - precision: {args.precision}\n")
+        f.write(f"  - corpus_path: {args.corpus_path}\n")
+        f.write(f"  - model_name: {args.model_name}\n")
+        f.write(f"  - loraadaptor_save_path_base: {args.loraadaptor_save_path_base}\n")
+        
+        if args.benchmark_paths is not None:
+            f.write(f"  - benchmark_paths: {args.benchmark_paths}\n")
+        else:
+            f.write(f"  - benchmark_data_path: {args.benchmark_data_path}\n")
+        
+        # 添加多worker信息
+        if hasattr(args, 'world_size') and args.world_size > 1:
+            f.write(f"  - 多worker模式: rank={args.rank}, world_size={args.world_size}\n")
+        
+        f.write(f"=" * 80 + "\n\n")
+    
+    # 保存原始的stdout和stderr
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
+    
+    # 创建重定向对象
+    stdout_tee = TeeOutput(log_file, original_stdout)
+    stderr_tee = TeeOutput(log_file, original_stderr)
+    
+    # 重定向stdout和stderr
+    sys.stdout = stdout_tee
+    sys.stderr = stderr_tee
+    
+    # 配置logging模块也输出到同一个文件
+    # 清除现有的handlers
+    for handler in logging.root.handlers[:]:
+        logging.root.removeHandler(handler)
+    
+    # 创建自定义的logging handler
+    class LogFileHandler(logging.Handler):
+        def __init__(self, log_file_path):
+            super().__init__()
+            self.log_file_path = log_file_path
+        
+        def emit(self, record):
+            try:
+                msg = self.format(record)
+                with open(self.log_file_path, 'a', encoding='utf-8') as f:
+                    f.write(f"{msg}\n")
+                    f.flush()
+                # 同时输出到终端
+                print(msg)
+            except Exception:
+                self.handleError(record)
+    
+    # 配置logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            LogFileHandler(log_file)
+        ]
+    )
+    
+    # 记录启动信息
+    print(f"🚀 日志系统已启动")
+    print(f"📝 完整日志保存到: {log_file}")
+    print(f"📊 训练配置: precision={args.precision}, dataset_type={args.dataset_type}")
+    print(f"📂 corpus_path={args.corpus_path}")
+    
+    # 记录benchmark相关信息
+    if args.benchmark_paths is not None:
+        print(f"📋 使用多个benchmark文件: {args.benchmark_paths}")
+    else:
+        print(f"📋 使用单个benchmark文件: {args.benchmark_data_path}")
+        
+    print(f"💾 loraadaptor_save_path_base={args.loraadaptor_save_path_base}")
+    print(f"🤖 model_name={args.model_name}")
+    
+    # 多worker信息
+    if hasattr(args, 'world_size') and args.world_size > 1:
+        print(f"🔄 多worker模式: rank={args.rank}, world_size={args.world_size}")
+    
+    print(f"=" * 80)
+    
+    # 存储重定向对象，用于后续清理
+    if not hasattr(setup_logging, '_redirects'):
+        setup_logging._redirects = []
+    setup_logging._redirects.extend([stdout_tee, stderr_tee])
+    
+    # 存储原始流，用于恢复
+    setup_logging._original_stdout = original_stdout
+    setup_logging._original_stderr = original_stderr
+    
+    return log_dir
+
+def cleanup_logging():
+    """
+    清理日志重定向，恢复原始的stdout和stderr
+    """
+    if hasattr(setup_logging, '_redirects'):
+        # 关闭所有重定向文件
+        for redirect in setup_logging._redirects:
+            redirect.close()
+        setup_logging._redirects.clear()
+    
+    # 恢复原始的stdout和stderr
+    if hasattr(setup_logging, '_original_stdout'):
+        sys.stdout = setup_logging._original_stdout
+    if hasattr(setup_logging, '_original_stderr'):
+        sys.stderr = setup_logging._original_stderr
+    
+    print("日志系统已关闭，输出已恢复正常")
+
+# 注册清理函数，在程序退出时自动调用
+import atexit
+atexit.register(cleanup_logging)

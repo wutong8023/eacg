@@ -1,0 +1,164 @@
+refcode测试失败，BigCodeBench/488的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_1_0.py']' returned non-zero exit status 1.
+stderr:
+../home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:13: RuntimeWarning: divide by zero encountered in divide
+  values = amplitude * np.sin(2 * np.pi * timestamps / period)
+/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:13: RuntimeWarning: invalid value encountered in divide
+  values = amplitude * np.sin(2 * np.pi * timestamps / period)
+/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:13: RuntimeWarning: invalid value encountered in sin
+  values = amplitude * np.sin(2 * np.pi * timestamps / period)
+FF.F
+======================================================================
+FAIL: test_case_3 (test_1_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 58, in test_case_3
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_case_4 (test_1_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 64, in test_case_4
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_case_6 (test_1_0.TestCases.test_case_6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 86, in test_case_6
+    self.assertFalse(
+AssertionError: True is not false : Results should be different with different seeds
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.129s
+
+FAILED (failures=3)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_1_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/488的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_1_0.py']' returned non-zero exit status 1.
+stderr:
+../home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:13: RuntimeWarning: divide by zero encountered in divide
+  values = np.sin(2 * np.pi * timestamps / period) * amplitude
+/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:13: RuntimeWarning: invalid value encountered in divide
+  values = np.sin(2 * np.pi * timestamps / period) * amplitude
+/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:13: RuntimeWarning: invalid value encountered in sin
+  values = np.sin(2 * np.pi * timestamps / period) * amplitude
+FF.F
+======================================================================
+FAIL: test_case_3 (test_1_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 60, in test_case_3
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_case_4 (test_1_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 66, in test_case_4
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_case_6 (test_1_0.TestCases.test_case_6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 88, in test_case_6
+    self.assertFalse(
+AssertionError: True is not false : Results should be different with different seeds
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.161s
+
+FAILED (failures=3)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_1_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/488的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_1_0.py']' returned non-zero exit status 1.
+stderr:
+/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:11: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  time_range = pd.date_range(start=datetime.datetime.utcfromtimestamp(start_time/1000),
+/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py:12: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  end=datetime.datetime.utcfromtimestamp(end_time/1000), freq=f'{step}ms')
+..EFFF
+======================================================================
+ERROR: test_case_3 (test_1_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 61, in test_case_3
+    task_func(0, 10000, 100, 1, 0)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 13, in task_func
+    seasonality = amplitude * np.sin(2 * np.pi / period * np.arange(len(time_range)))
+                                     ~~~~~~~~~~^~~~~~~~
+ZeroDivisionError: float division by zero
+
+======================================================================
+FAIL: test_case_4 (test_1_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 66, in test_case_4
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_case_5 (test_1_0.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 75, in test_case_5
+    self.assertEqual(len(xy_data), expected_length)
+AssertionError: 101 != 100
+
+======================================================================
+FAIL: test_case_6 (test_1_0.TestCases.test_case_6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_1_0.py", line 88, in test_case_6
+    self.assertFalse(
+AssertionError: True is not false : Results should be different with different seeds
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.135s
+
+FAILED (failures=3, errors=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_1_0.py']' returned non-zero exit status 1.
+

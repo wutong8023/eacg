@@ -1,0 +1,116 @@
+{
+    "evaluation_time": "2025-04-26 11:38:44",
+    "model_name": "gpt-3.5-turbo",
+    "dataset_name": "vscc_datas_for_warning",
+    "ban_deprecation": true,
+    "num_processes": 4,
+    "results": {
+        "pass@1": 0.16,
+        "pass@3": 0.16,
+        "total_samples": 25,
+        "pass@1_count": 4,
+        "pass@3_count": 4,
+        "task_results": {
+            "0": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "1": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "2": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "3": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "4": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "5": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "6": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "7": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "8": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "9": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "10": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "11": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "12": {
+                "pass@1": true,
+                "pass@3": true
+            },
+            "13": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "14": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "15": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "16": {
+                "pass@1": true,
+                "pass@3": true
+            },
+            "17": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "18": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "19": {
+                "pass@1": true,
+                "pass@3": true
+            },
+            "20": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "21": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "22": {
+                "pass@1": true,
+                "pass@3": true
+            },
+            "23": {
+                "pass@1": false,
+                "pass@3": false
+            },
+            "24": {
+                "pass@1": false,
+                "pass@3": false
+            }
+        }
+    }
+}

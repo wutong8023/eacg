@@ -1,0 +1,30 @@
+SRCCODE_CORPUS_PATH: "/datanfs4/chenrongyi/data/srccodes" 
+DOCSTRING_CORPUS_PATH: "/datanfs4/chenrongyi/data/docs" 
+
+SRCCODE_EMBEDDING_BASE_PATH: "/datanfs4/chenrongyi/data/RAG/srccodes_embeddings" 
+DOCSTRING_EMBEDDING_BASE_PATH: "/datanfs4/chenrongyi/data/RAG/docstring_embeddings" 
+
+RAG_COLLECTION_BASE: "/datanfs4/chenrongyi/data/RAG/chroma_data" # 与Knowledge_type一起决定collection的存储位置,{RAG_COLLECTION_BASE}/{KNOWLEDGE_TYPE}
+KNOWLEDGE_TYPE: "srccodes" # srccodes或docstring
+
+# Embedding Configuration
+EMBEDDING_SOURCE: 'local'  # Options: 'local', 'togetherai' 
+LOCAL_EMBEDDING_MODEL: 'all-MiniLM-L6-v2' # Model for local embeddings
+TOGETHERAI_EMBEDDING_MODEL: 'togethercomputer/m2-bert-80M-8k-retrieval' # Example model for Together AI embeddings
+QUERY_CACHE_DIR: "/datanfs4/chenrongyi/RAG_cache/.rag_query_cache_json"
+
+TOGETHER_API_KEY_PATH: "/datanfs4/chenrongyi/data/API_KEYSET/togetherai.txt"
+VSCC_LOW_BOUND: 0
+VSCC_HIGH_BOUND: 1000
+# RAG
+RAG_DOCUMENT_NUM: 1000 # RAG和MEMORY都这个限制
+RAG_MAX_TOKEN_LENGTH: 8000
+
+# FC
+FC_MAX_TOKEN_LENGTH: 0 # 现在设置为0，直接当作基线
+
+#MEMORY
+EMLLM_MAX_TOKEN_LENGTH: 32000 # EMLLM通过RAG直接获取到的上下文的最大长度(也可以设置为最大，但是运行上会很慢)
+#Deprecation_keywords
+DEPRECATION_KEYWORDS: ["DeprecationWarning","FutureWarning","PendingDeprecationWarning","DeprecationWarning",'deprecate']
+

@@ -1,0 +1,8 @@
+CORPUS_PATH: "/datanfs2/chenrongyi/data/docs"
+EMBEDDING_BASE_PATH: "/datanfs2/chenrongyi/data/RAG/docs_embeddings" 
+RAG_COLLECTION_BASE: "/datanfs2/chenrongyi/data/RAG/chroma_data" # 与Knowledge_type一起决定collection的存储位置,{RAG_COLLECTION_BASE}/{KNOWLEDGE_TYPE}
+KNOWLEDGE_TYPE: "docstring" # srccodes或docstring
+# Embedding Configuration
+EMBEDDING_SOURCE: 'local'  # Options: 'local', 'togetherai'
+LOCAL_EMBEDDING_MODEL: 'all-MiniLM-L6-v2' # Model for local embeddings
+TOGETHERAI_EMBEDDING_MODEL: 'togethercomputer/m2-bert-80M-8k-retrieval' # Example model for Together AI embeddings

@@ -1,0 +1,239 @@
+refcode测试失败，BigCodeBench/746的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'sklearn': '1.6.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+EEFEE....
+======================================================================
+ERROR: test_case_1 (test_3_0.TestCases.test_case_1)
+prediction for one column
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 79, in test_case_1
+    model = task_func(df, 'predict')
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[:, target_column] = np.where(df[target_column].isin(target_values), df[target_column], 0)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+ERROR: test_case_2 (test_3_0.TestCases.test_case_2)
+multiple column prediction
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 93, in test_case_2
+    model = task_func(df, 'predict')
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[:, target_column] = np.where(df[target_column].isin(target_values), df[target_column], 0)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+ERROR: test_case_4 (test_3_0.TestCases.test_case_4)
+df with constant values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 122, in test_case_4
+    model = task_func(df, 'J')
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[:, target_column] = np.where(df[target_column].isin(target_values), df[target_column], 0)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+ERROR: test_case_5 (test_3_0.TestCases.test_case_5)
+df filled with random floats
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 131, in test_case_5
+    model = task_func(df, 'predict')
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[:, target_column] = np.where(df[target_column].isin(target_values), df[target_column], 0)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+FAIL: test_case_3 (test_3_0.TestCases.test_case_3)
+test working target value --> with target value linear regression can't deliver good results
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 116, in test_case_3
+    self.assertAlmostEqual(model.coef_[0], 0.2921456, places=2)
+AssertionError: np.float64(-0.25028919071523736) != 0.2921456 within 2 places (np.float64(0.5424347907152374) difference)
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.035s
+
+FAILED (failures=1, errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/746的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'sklearn': '1.6.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/unittest/main.py", line 104, in __init__
+    self.parseArgs(argv)
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/unittest/main.py", line 153, in parseArgs
+    self.createTests()
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/unittest/main.py", line 164, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 31
+    </end>
+    ^
+SyntaxError: invalid syntax
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/746的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'sklearn': '1.6.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+EEFEE....
+======================================================================
+ERROR: test_case_1 (test_3_0.TestCases.test_case_1)
+prediction for one column
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 79, in test_case_1
+    model = task_func(df, 'predict')
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[~df[target_column].isin(target_values), target_column] = 0
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+ERROR: test_case_2 (test_3_0.TestCases.test_case_2)
+multiple column prediction
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 93, in test_case_2
+    model = task_func(df, 'predict')
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[~df[target_column].isin(target_values), target_column] = 0
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+ERROR: test_case_4 (test_3_0.TestCases.test_case_4)
+df with constant values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 122, in test_case_4
+    model = task_func(df, 'J')
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[~df[target_column].isin(target_values), target_column] = 0
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+ERROR: test_case_5 (test_3_0.TestCases.test_case_5)
+df filled with random floats
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 131, in test_case_5
+    model = task_func(df, 'predict')
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 17, in task_func
+    df.loc[~df[target_column].isin(target_values), target_column] = 0
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/series.py", line 5559, in isin
+    result = algorithms.isin(self._values, values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/pandas/core/algorithms.py", line 477, in isin
+    raise TypeError(
+TypeError: only list-like objects are allowed to be passed to isin(), you passed a `NoneType`
+
+======================================================================
+FAIL: test_case_3 (test_3_0.TestCases.test_case_3)
+test working target value --> with target value linear regression can't deliver good results
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 116, in test_case_3
+    self.assertAlmostEqual(model.coef_[0], 0.2921456, places=2)
+AssertionError: np.float64(-0.25028919071523736) != 0.2921456 within 2 places (np.float64(0.5424347907152374) difference)
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.037s
+
+FAILED (failures=1, errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+

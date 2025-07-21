@@ -1,0 +1,232 @@
+refcode测试失败，BigCodeBench/889的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+.E....
+======================================================================
+ERROR: test_empty_csv (test_3_0.TestCases.test_empty_csv)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 43, in test_empty_csv
+    result = task_func(self.test_dir, filename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 12, in task_func
+    df = pd.read_csv(file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.026s
+
+FAILED (errors=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/889的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+.E....
+======================================================================
+ERROR: test_empty_csv (test_3_0.TestCases.test_empty_csv)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 43, in test_empty_csv
+    result = task_func(self.test_dir, filename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 12, in task_func
+    df = pd.read_csv(file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.023s
+
+FAILED (errors=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/889的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+.E.EE.
+======================================================================
+ERROR: test_empty_csv (test_3_0.TestCases.test_empty_csv)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 44, in test_empty_csv
+    result = task_func(self.test_dir, filename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 12, in task_func
+    df = pd.read_csv(file_path)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+
+======================================================================
+ERROR: test_mixed_columns (test_3_0.TestCases.test_mixed_columns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 70, in test_mixed_columns
+    result = task_func(self.test_dir, filename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 15, in task_func
+    df[numeric_cols] = df[numeric_cols].fillna(df.mean())
+                                               ^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 11693, in mean
+    result = super().mean(axis, skipna, numeric_only, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/generic.py", line 12420, in mean
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 11562, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 1500, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/internals/blocks.py", line 404, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 11481, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 720, in nanmean
+    the_sum = _ensure_numeric(the_sum)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 1686, in _ensure_numeric
+    raise TypeError(f"Could not convert {x} to numeric")
+TypeError: Could not convert ['AliceBobCharlie'] to numeric
+
+======================================================================
+ERROR: test_no_numeric_data (test_3_0.TestCases.test_no_numeric_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 88, in test_no_numeric_data
+    result = task_func(self.test_dir, filename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 15, in task_func
+    df[numeric_cols] = df[numeric_cols].fillna(df.mean())
+                                               ^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 11693, in mean
+    result = super().mean(axis, skipna, numeric_only, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/generic.py", line 12420, in mean
+    return self._stat_function(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/generic.py", line 12377, in _stat_function
+    return self._reduce(
+           ^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 11562, in _reduce
+    res = df._mgr.reduce(blk_func)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 1500, in reduce
+    nbs = blk.reduce(func)
+          ^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/internals/blocks.py", line 404, in reduce
+    result = func(self.values)
+             ^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/frame.py", line 11481, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 147, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 404, in new_func
+    result = func(values, axis=axis, skipna=skipna, mask=mask, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 720, in nanmean
+    the_sum = _ensure_numeric(the_sum)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/lib/python3.12/site-packages/pandas/core/nanops.py", line 1686, in _ensure_numeric
+    raise TypeError(f"Could not convert {x} to numeric")
+TypeError: Could not convert ['New YorkLos AngelesChicago'] to numeric
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.041s
+
+FAILED (errors=3)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+

@@ -1,0 +1,1 @@
+先使用testPyright_parallel和testMypy_parallel获取错误信息，随后利用cMypyError2Format和cPyrightError2Format将错误信息转换为jsonl格式，最后使用combineParsedResult.py将错误信息合并。

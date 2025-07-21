@@ -1,0 +1,195 @@
+refcode测试失败，BigCodeBench/918的依赖{'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+EEEEE
+======================================================================
+ERROR: test_acronyms_multiple_columns (test_3_0.TestCases.test_acronyms_multiple_columns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 29, in test_acronyms_multiple_columns
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_acronyms_single_column (test_3_0.TestCases.test_acronyms_single_column)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 22, in test_acronyms_single_column
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_empty_dataframe (test_3_0.TestCases.test_empty_dataframe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 50, in test_empty_dataframe
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_no_acronyms (test_3_0.TestCases.test_no_acronyms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 36, in test_no_acronyms
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_non_string_types (test_3_0.TestCases.test_non_string_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 43, in test_non_string_types
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.013s
+
+FAILED (errors=5)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/918的依赖{'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+EEEEE
+======================================================================
+ERROR: test_acronyms_multiple_columns (test_3_0.TestCases.test_acronyms_multiple_columns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 27, in test_acronyms_multiple_columns
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_acronyms_single_column (test_3_0.TestCases.test_acronyms_single_column)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 20, in test_acronyms_single_column
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_empty_dataframe (test_3_0.TestCases.test_empty_dataframe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 48, in test_empty_dataframe
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_no_acronyms (test_3_0.TestCases.test_no_acronyms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 34, in test_no_acronyms
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_non_string_types (test_3_0.TestCases.test_non_string_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 41, in test_non_string_types
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+FAILED (errors=5)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/918的依赖{'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+stderr:
+EEEEE
+======================================================================
+ERROR: test_acronyms_multiple_columns (test_3_0.TestCases.test_acronyms_multiple_columns)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 27, in test_acronyms_multiple_columns
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_acronyms_single_column (test_3_0.TestCases.test_acronyms_single_column)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 20, in test_acronyms_single_column
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_empty_dataframe (test_3_0.TestCases.test_empty_dataframe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 48, in test_empty_dataframe
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_no_acronyms (test_3_0.TestCases.test_no_acronyms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 34, in test_no_acronyms
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+======================================================================
+ERROR: test_non_string_types (test_3_0.TestCases.test_non_string_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_3_0.py", line 41, in test_non_string_types
+    result = task_func(data, mapping)
+             ^^^^^^^^^
+NameError: name 'task_func' is not defined
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+FAILED (errors=5)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_3_0.py']' returned non-zero exit status 1.
+

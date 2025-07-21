@@ -1,0 +1,159 @@
+refcode测试失败，BigCodeBench/680的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'sklearn': '1.6.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+stderr:
+....E
+======================================================================
+ERROR: test_case_5 (test_2_0.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 63, in test_case_5
+    df = task_func(df, [])
+         ^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 6, in task_func
+    df[features] = scaler.fit_transform(df[features])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/base.py", line 918, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/preprocessing/_data.py", line 894, in fit
+    return self.partial_fit(X, y, sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/preprocessing/_data.py", line 930, in partial_fit
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.025s
+
+FAILED (errors=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/680的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'sklearn': '1.6.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+stderr:
+....E
+======================================================================
+ERROR: test_case_5 (test_2_0.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 65, in test_case_5
+    df = task_func(df, [])
+         ^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 8, in task_func
+    df[features] = scaler.fit_transform(df[features])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/base.py", line 918, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/preprocessing/_data.py", line 894, in fit
+    return self.partial_fit(X, y, sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/preprocessing/_data.py", line 930, in partial_fit
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.023s
+
+FAILED (errors=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/680的依赖{'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'sklearn': '1.6.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+stderr:
+....E
+======================================================================
+ERROR: test_case_5 (test_2_0.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 63, in test_case_5
+    df = task_func(df, [])
+         ^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 6, in task_func
+    df[features] = scaler.fit_transform(df[features])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/base.py", line 918, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/preprocessing/_data.py", line 894, in fit
+    return self.partial_fit(X, y, sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/preprocessing/_data.py", line 930, in partial_fit
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/lib/python3.12/site-packages/sklearn/utils/validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.023s
+
+FAILED (errors=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/numpy2.2.1_pandas2.2.3_python3.12_sklearn1.6.1/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+

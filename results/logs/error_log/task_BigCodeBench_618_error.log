@@ -1,0 +1,215 @@
+refcode测试失败，BigCodeBench/618的依赖{'matplotlib': '3.10.0', 'pandas': '2.2.3', 'python': '3.12', 'seaborn': '0.13.2'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/unittest/main.py", line 104, in __init__
+    self.parseArgs(argv)
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/unittest/main.py", line 153, in parseArgs
+    self.createTests()
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/unittest/main.py", line 164, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 32
+    </end>
+    ^
+SyntaxError: invalid syntax
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/618的依赖{'matplotlib': '3.10.0', 'pandas': '2.2.3', 'python': '3.12', 'seaborn': '0.13.2'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+stderr:
+FEEEE
+======================================================================
+ERROR: test_case_2 (test_2_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Penalty Cost'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 58, in test_case_2
+    self.assertTrue((df['Penalty Cost'] <= 5000).all())  # max penalty cost = 5 * 1000
+                     ~~^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Penalty Cost'
+
+======================================================================
+ERROR: test_case_3 (test_2_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Penalty Cost'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 65, in test_case_3
+    self.assertTrue((df['Penalty Cost'] == 0).all())
+                     ~~^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Penalty Cost'
+
+======================================================================
+ERROR: test_case_4 (test_2_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Penalty Cost'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 76, in test_case_4
+    self.assertTrue((df['Penalty Cost'] == 0).all())
+                     ~~^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Penalty Cost'
+
+======================================================================
+ERROR: test_case_5 (test_2_0.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Penalty Cost'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 84, in test_case_5
+    self.assertTrue((df['Penalty Cost'] <= 1000).all())  # max penalty cost = 1 * 1000
+                     ~~^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Penalty Cost'
+
+======================================================================
+FAIL: test_case_1 (test_2_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 39, in test_case_1
+    self.assertEqual(df.shape, (5, 3))
+AssertionError: Tuples differ: (10, 4) != (5, 3)
+
+First differing element 0:
+10
+5
+
+- (10, 4)
++ (5, 3)
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.577s
+
+FAILED (failures=1, errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/618的依赖{'matplotlib': '3.10.0', 'pandas': '2.2.3', 'python': '3.12', 'seaborn': '0.13.2'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+stderr:
+F....
+======================================================================
+FAIL: test_case_1 (test_2_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_2_0.py", line 42, in test_case_1
+    self.assertEqual(df.shape, (5, 3))
+AssertionError: Tuples differ: (10, 3) != (5, 3)
+
+First differing element 0:
+10
+5
+
+- (10, 3)
+?  ^^
+
++ (5, 3)
+?  ^
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.575s
+
+FAILED (failures=1)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_pandas2.2.3_python3.12_seaborn0.13.2/bin/python', '-m', 'unittest', 'test_2_0.py']' returned non-zero exit status 1.
+

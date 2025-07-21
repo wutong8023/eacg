@@ -1,0 +1,2 @@
+run_multi_worker_context.sh 是用于多worker并行生成context的脚本，需要指定worker数量和使用的GPU。
+其中，batch_context_generator可以用来测试基本功能，进行debug

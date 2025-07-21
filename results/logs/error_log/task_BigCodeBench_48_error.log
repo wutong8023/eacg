@@ -1,0 +1,275 @@
+refcode测试失败，BigCodeBench/48的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EEEE.
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 49, in test_case_1
+    result = task_func(10)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(unix_timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 54, in test_case_2
+    result = task_func(15)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(unix_timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_3 (test_0_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 63, in test_case_3
+    task_func(20, output_path=self.o_1)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(unix_timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 67, in test_case_4
+    result = task_func(50)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(unix_timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.028s
+
+FAILED (errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/48的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EEEE.
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 49, in test_case_1
+    result = task_func(10)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 54, in test_case_2
+    result = task_func(15)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_3 (test_0_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 63, in test_case_3
+    task_func(20, output_path=self.o_1)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 67, in test_case_4
+    result = task_func(50)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 14, in task_func
+    formatted_timestamp = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.051s
+
+FAILED (errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/48的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/main.py", line 104, in __init__
+    self.parseArgs(argv)
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/main.py", line 153, in parseArgs
+    self.createTests()
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/main.py", line 164, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 23
+    </end>
+    ^
+SyntaxError: invalid syntax
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/48的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/main.py", line 104, in __init__
+    self.parseArgs(argv)
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/main.py", line 153, in parseArgs
+    self.createTests()
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/main.py", line 164, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 29
+    </end>
+    ^
+SyntaxError: invalid syntax
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/48的依赖{'datetime': '5.5', 'matplotlib': '3.10.0', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EEEE.
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 56, in test_case_1
+    result = task_func(10)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    formatted_time = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 61, in test_case_2
+    result = task_func(15)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    formatted_time = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_3 (test_0_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 70, in test_case_3
+    task_func(20, output_path=self.o_1)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    formatted_time = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+======================================================================
+ERROR: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 74, in test_case_4
+    result = task_func(50)
+             ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    formatted_time = datetime.datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.034s
+
+FAILED (errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_matplotlib3.10.0_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+

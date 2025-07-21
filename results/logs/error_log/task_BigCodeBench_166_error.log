@@ -1,0 +1,136 @@
+refcode测试失败，BigCodeBench/166的依赖{'datetime': '5.5', 'holidays': '0.64', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/site-packages/holidays/utils.py:276: DeprecationWarning: CountryHoliday is deprecated, use country_holidays instead.
+  warnings.warn(
+F...FF.F..
+======================================================================
+FAIL: test_custom_dates (test_0_0.TestCases.test_custom_dates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 31, in test_custom_dates
+    self.assertEqual([datetime(2023, 1, 3)], result)  # A business day
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [datetime.datetime(2023, 1, 3, 0, 0)] != [Timestamp('2023-01-02 00:00:00'), Timestamp('2023-01-03 00:00:00')]
+
+First differing element 0:
+datetime.datetime(2023, 1, 3, 0, 0)
+Timestamp('2023-01-02 00:00:00')
+
+Second list contains 1 additional elements.
+First extra element 1:
+Timestamp('2023-01-03 00:00:00')
+
+- [datetime.datetime(2023, 1, 3, 0, 0)]
++ [Timestamp('2023-01-02 00:00:00'), Timestamp('2023-01-03 00:00:00')]
+
+======================================================================
+FAIL: test_non_default_country (test_0_0.TestCases.test_non_default_country)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 44, in test_non_default_country
+    self.assertNotIn(datetime(2023, 4, 7), result)  # Good Friday in UK
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: datetime.datetime(2023, 4, 7, 0, 0) unexpectedly found in [Timestamp('2023-01-02 00:00:00'), Timestamp('2023-01-03 00:00:00'), Timestamp('2023-01-04 00:00:00'), Timestamp('2023-01-05 00:00:00'), Timestamp('2023-01-06 00:00:00'), Timestamp('2023-01-09 00:00:00'), Timestamp('2023-01-10 00:00:00'), Timestamp('2023-01-11 00:00:00'), Timestamp('2023-01-12 00:00:00'), Timestamp('2023-01-13 00:00:00'), Timestamp('2023-01-16 00:00:00'), Timestamp('2023-01-17 00:00:00'), Timestamp('2023-01-18 00:00:00'), Timestamp('2023-01-19 00:00:00'), Timestamp('2023-01-20 00:00:00'), Timestamp('2023-01-23 00:00:00'), Timestamp('2023-01-24 00:00:00'), Timestamp('2023-01-25 00:00:00'), Timestamp('2023-01-26 00:00:00'), Timestamp('2023-01-27 00:00:00'), Timestamp('2023-01-30 00:00:00'), Timestamp('2023-01-31 00:00:00'), Timestamp('2023-02-01 00:00:00'), Timestamp('2023-02-02 00:00:00'), Timestamp('2023-02-03 00:00:00'), Timestamp('2023-02-06 00:00:00'), Timestamp('2023-02-07 00:00:00'), Timestamp('2023-02-08 00:00:00'), Timestamp('2023-02-09 00:00:00'), Timestamp('2023-02-10 00:00:00'), Timestamp('2023-02-13 00:00:00'), Timestamp('2023-02-14 00:00:00'), Timestamp('2023-02-15 00:00:00'), Timestamp('2023-02-16 00:00:00'), Timestamp('2023-02-17 00:00:00'), Timestamp('2023-02-20 00:00:00'), Timestamp('2023-02-21 00:00:00'), Timestamp('2023-02-22 00:00:00'), Timestamp('2023-02-23 00:00:00'), Timestamp('2023-02-24 00:00:00'), Timestamp('2023-02-27 00:00:00'), Timestamp('2023-02-28 00:00:00'), Timestamp('2023-03-01 00:00:00'), Timestamp('2023-03-02 00:00:00'), Timestamp('2023-03-03 00:00:00'), Timestamp('2023-03-06 00:00:00'), Timestamp('2023-03-07 00:00:00'), Timestamp('2023-03-08 00:00:00'), Timestamp('2023-03-09 00:00:00'), Timestamp('2023-03-10 00:00:00'), Timestamp('2023-03-13 00:00:00'), Timestamp('2023-03-14 00:00:00'), Timestamp('2023-03-15 00:00:00'), Timestamp('2023-03-16 00:00:00'), Timestamp('2023-03-17 00:00:00'), Timestamp('2023-03-20 00:00:00'), Timestamp('2023-03-21 00:00:00'), Timestamp('2023-03-22 00:00:00'), Timestamp('2023-03-23 00:00:00'), Timestamp('2023-03-24 00:00:00'), Timestamp('2023-03-27 00:00:00'), Timestamp('2023-03-28 00:00:00'), Timestamp('2023-03-29 00:00:00'), Timestamp('2023-03-30 00:00:00'), Timestamp('2023-03-31 00:00:00'), Timestamp('2023-04-03 00:00:00'), Timestamp('2023-04-04 00:00:00'), Timestamp('2023-04-05 00:00:00'), Timestamp('2023-04-06 00:00:00'), Timestamp('2023-04-07 00:00:00'), Timestamp('2023-04-10 00:00:00'), Timestamp('2023-04-11 00:00:00'), Timestamp('2023-04-12 00:00:00'), Timestamp('2023-04-13 00:00:00'), Timestamp('2023-04-14 00:00:00'), Timestamp('2023-04-17 00:00:00'), Timestamp('2023-04-18 00:00:00'), Timestamp('2023-04-19 00:00:00'), Timestamp('2023-04-20 00:00:00'), Timestamp('2023-04-21 00:00:00'), Timestamp('2023-04-24 00:00:00'), Timestamp('2023-04-25 00:00:00'), Timestamp('2023-04-26 00:00:00'), Timestamp('2023-04-27 00:00:00'), Timestamp('2023-04-28 00:00:00'), Timestamp('2023-05-01 00:00:00'), Timestamp('2023-05-02 00:00:00'), Timestamp('2023-05-03 00:00:00'), Timestamp('2023-05-04 00:00:00'), Timestamp('2023-05-05 00:00:00'), Timestamp('2023-05-08 00:00:00'), Timestamp('2023-05-09 00:00:00'), Timestamp('2023-05-10 00:00:00'), Timestamp('2023-05-11 00:00:00'), Timestamp('2023-05-12 00:00:00'), Timestamp('2023-05-15 00:00:00'), Timestamp('2023-05-16 00:00:00'), Timestamp('2023-05-17 00:00:00'), Timestamp('2023-05-18 00:00:00'), Timestamp('2023-05-19 00:00:00'), Timestamp('2023-05-22 00:00:00'), Timestamp('2023-05-23 00:00:00'), Timestamp('2023-05-24 00:00:00'), Timestamp('2023-05-25 00:00:00'), Timestamp('2023-05-26 00:00:00'), Timestamp('2023-05-29 00:00:00'), Timestamp('2023-05-30 00:00:00'), Timestamp('2023-05-31 00:00:00'), Timestamp('2023-06-01 00:00:00'), Timestamp('2023-06-02 00:00:00'), Timestamp('2023-06-05 00:00:00'), Timestamp('2023-06-06 00:00:00'), Timestamp('2023-06-07 00:00:00'), Timestamp('2023-06-08 00:00:00'), Timestamp('2023-06-09 00:00:00'), Timestamp('2023-06-12 00:00:00'), Timestamp('2023-06-13 00:00:00'), Timestamp('2023-06-14 00:00:00'), Timestamp('2023-06-15 00:00:00'), Timestamp('2023-06-16 00:00:00'), Timestamp('2023-06-19 00:00:00'), Timestamp('2023-06-20 00:00:00'), Timestamp('2023-06-21 00:00:00'), Timestamp('2023-06-22 00:00:00'), Timestamp('2023-06-23 00:00:00'), Timestamp('2023-06-26 00:00:00'), Timestamp('2023-06-27 00:00:00'), Timestamp('2023-06-28 00:00:00'), Timestamp('2023-06-29 00:00:00'), Timestamp('2023-06-30 00:00:00'), Timestamp('2023-07-03 00:00:00'), Timestamp('2023-07-04 00:00:00'), Timestamp('2023-07-05 00:00:00'), Timestamp('2023-07-06 00:00:00'), Timestamp('2023-07-07 00:00:00'), Timestamp('2023-07-10 00:00:00'), Timestamp('2023-07-11 00:00:00'), Timestamp('2023-07-12 00:00:00'), Timestamp('2023-07-13 00:00:00'), Timestamp('2023-07-14 00:00:00'), Timestamp('2023-07-17 00:00:00'), Timestamp('2023-07-18 00:00:00'), Timestamp('2023-07-19 00:00:00'), Timestamp('2023-07-20 00:00:00'), Timestamp('2023-07-21 00:00:00'), Timestamp('2023-07-24 00:00:00'), Timestamp('2023-07-25 00:00:00'), Timestamp('2023-07-26 00:00:00'), Timestamp('2023-07-27 00:00:00'), Timestamp('2023-07-28 00:00:00'), Timestamp('2023-07-31 00:00:00'), Timestamp('2023-08-01 00:00:00'), Timestamp('2023-08-02 00:00:00'), Timestamp('2023-08-03 00:00:00'), Timestamp('2023-08-04 00:00:00'), Timestamp('2023-08-07 00:00:00'), Timestamp('2023-08-08 00:00:00'), Timestamp('2023-08-09 00:00:00'), Timestamp('2023-08-10 00:00:00'), Timestamp('2023-08-11 00:00:00'), Timestamp('2023-08-14 00:00:00'), Timestamp('2023-08-15 00:00:00'), Timestamp('2023-08-16 00:00:00'), Timestamp('2023-08-17 00:00:00'), Timestamp('2023-08-18 00:00:00'), Timestamp('2023-08-21 00:00:00'), Timestamp('2023-08-22 00:00:00'), Timestamp('2023-08-23 00:00:00'), Timestamp('2023-08-24 00:00:00'), Timestamp('2023-08-25 00:00:00'), Timestamp('2023-08-28 00:00:00'), Timestamp('2023-08-29 00:00:00'), Timestamp('2023-08-30 00:00:00'), Timestamp('2023-08-31 00:00:00'), Timestamp('2023-09-01 00:00:00'), Timestamp('2023-09-04 00:00:00'), Timestamp('2023-09-05 00:00:00'), Timestamp('2023-09-06 00:00:00'), Timestamp('2023-09-07 00:00:00'), Timestamp('2023-09-08 00:00:00'), Timestamp('2023-09-11 00:00:00'), Timestamp('2023-09-12 00:00:00'), Timestamp('2023-09-13 00:00:00'), Timestamp('2023-09-14 00:00:00'), Timestamp('2023-09-15 00:00:00'), Timestamp('2023-09-18 00:00:00'), Timestamp('2023-09-19 00:00:00'), Timestamp('2023-09-20 00:00:00'), Timestamp('2023-09-21 00:00:00'), Timestamp('2023-09-22 00:00:00'), Timestamp('2023-09-25 00:00:00'), Timestamp('2023-09-26 00:00:00'), Timestamp('2023-09-27 00:00:00'), Timestamp('2023-09-28 00:00:00'), Timestamp('2023-09-29 00:00:00'), Timestamp('2023-10-02 00:00:00'), Timestamp('2023-10-03 00:00:00'), Timestamp('2023-10-04 00:00:00'), Timestamp('2023-10-05 00:00:00'), Timestamp('2023-10-06 00:00:00'), Timestamp('2023-10-09 00:00:00'), Timestamp('2023-10-10 00:00:00'), Timestamp('2023-10-11 00:00:00'), Timestamp('2023-10-12 00:00:00'), Timestamp('2023-10-13 00:00:00'), Timestamp('2023-10-16 00:00:00'), Timestamp('2023-10-17 00:00:00'), Timestamp('2023-10-18 00:00:00'), Timestamp('2023-10-19 00:00:00'), Timestamp('2023-10-20 00:00:00'), Timestamp('2023-10-23 00:00:00'), Timestamp('2023-10-24 00:00:00'), Timestamp('2023-10-25 00:00:00'), Timestamp('2023-10-26 00:00:00'), Timestamp('2023-10-27 00:00:00'), Timestamp('2023-10-30 00:00:00'), Timestamp('2023-10-31 00:00:00'), Timestamp('2023-11-01 00:00:00'), Timestamp('2023-11-02 00:00:00'), Timestamp('2023-11-03 00:00:00'), Timestamp('2023-11-06 00:00:00'), Timestamp('2023-11-07 00:00:00'), Timestamp('2023-11-08 00:00:00'), Timestamp('2023-11-09 00:00:00'), Timestamp('2023-11-10 00:00:00'), Timestamp('2023-11-13 00:00:00'), Timestamp('2023-11-14 00:00:00'), Timestamp('2023-11-15 00:00:00'), Timestamp('2023-11-16 00:00:00'), Timestamp('2023-11-17 00:00:00'), Timestamp('2023-11-20 00:00:00'), Timestamp('2023-11-21 00:00:00'), Timestamp('2023-11-22 00:00:00'), Timestamp('2023-11-23 00:00:00'), Timestamp('2023-11-24 00:00:00'), Timestamp('2023-11-27 00:00:00'), Timestamp('2023-11-28 00:00:00'), Timestamp('2023-11-29 00:00:00'), Timestamp('2023-11-30 00:00:00'), Timestamp('2023-12-01 00:00:00'), Timestamp('2023-12-04 00:00:00'), Timestamp('2023-12-05 00:00:00'), Timestamp('2023-12-06 00:00:00'), Timestamp('2023-12-07 00:00:00'), Timestamp('2023-12-08 00:00:00'), Timestamp('2023-12-11 00:00:00'), Timestamp('2023-12-12 00:00:00'), Timestamp('2023-12-13 00:00:00'), Timestamp('2023-12-14 00:00:00'), Timestamp('2023-12-15 00:00:00'), Timestamp('2023-12-18 00:00:00'), Timestamp('2023-12-19 00:00:00'), Timestamp('2023-12-20 00:00:00'), Timestamp('2023-12-21 00:00:00'), Timestamp('2023-12-22 00:00:00'), Timestamp('2023-12-25 00:00:00'), Timestamp('2023-12-26 00:00:00'), Timestamp('2023-12-27 00:00:00'), Timestamp('2023-12-28 00:00:00'), Timestamp('2023-12-29 00:00:00')]
+
+======================================================================
+FAIL: test_range_including_public_holiday (test_0_0.TestCases.test_range_including_public_holiday)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 56, in test_range_including_public_holiday
+    self.assertEqual([datetime(2023, 7, 3), datetime(2023, 7, 5)], result)  # July 4th is excluded
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [datetime.datetime(2023, 7, 3, 0, 0), date[27 chars], 0)] != [Timestamp('2023-07-03 00:00:00'), Timesta[55 chars]00')]
+
+First differing element 1:
+datetime.datetime(2023, 7, 5, 0, 0)
+Timestamp('2023-07-04 00:00:00')
+
+Second list contains 1 additional elements.
+First extra element 2:
+Timestamp('2023-07-05 00:00:00')
+
+- [datetime.datetime(2023, 7, 3, 0, 0), datetime.datetime(2023, 7, 5, 0, 0)]
++ [Timestamp('2023-07-03 00:00:00'),
++  Timestamp('2023-07-04 00:00:00'),
++  Timestamp('2023-07-05 00:00:00')]
+
+======================================================================
+FAIL: test_short_business_week (test_0_0.TestCases.test_short_business_week)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 62, in test_short_business_week
+    self.assertEqual([datetime(2023, 11, 20), datetime(2023, 11, 21), datetime(2023, 11, 22), datetime(2023, 11, 24)], result)
+AssertionError: Lists differ: [datetime.datetime(2023, 11, 20, 0, 0), da[109 chars], 0)] != [Timestamp('2023-11-20 00:00:00'), Timesta[123 chars]00')]
+
+First differing element 3:
+datetime.datetime(2023, 11, 24, 0, 0)
+Timestamp('2023-11-23 00:00:00')
+
+Second list contains 1 additional elements.
+First extra element 4:
+Timestamp('2023-11-24 00:00:00')
+
+- [datetime.datetime(2023, 11, 20, 0, 0),
+-  datetime.datetime(2023, 11, 21, 0, 0),
+-  datetime.datetime(2023, 11, 22, 0, 0),
+-  datetime.datetime(2023, 11, 24, 0, 0)]
++ [Timestamp('2023-11-20 00:00:00'),
++  Timestamp('2023-11-21 00:00:00'),
++  Timestamp('2023-11-22 00:00:00'),
++  Timestamp('2023-11-23 00:00:00'),
++  Timestamp('2023-11-24 00:00:00')]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.077s
+
+FAILED (failures=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/166的依赖{'datetime': '5.5', 'holidays': '0.64', 'pandas': '2.2.3', 'python': '3.12'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/unittest/main.py", line 104, in __init__
+    self.parseArgs(argv)
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/unittest/main.py", line 153, in parseArgs
+    self.createTests()
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/unittest/main.py", line 164, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 21
+    </end>
+    ^
+SyntaxError: invalid syntax
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/datetime5.5_holidays0.64_pandas2.2.3_python3.12/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+

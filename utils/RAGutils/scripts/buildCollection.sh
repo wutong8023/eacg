@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python utils/RAGutils/buildCollection.py --dataset benchmark/data/VersiBCB_Benchmark/vace_datas.json --task-field target_dependency --batch-size 250 --num-processes 3

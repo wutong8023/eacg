@@ -1,0 +1,235 @@
+refcode测试失败，BigCodeBench/36的依赖{'matplotlib': '3.10.0', 'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'scipy': '1.15.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+.EEE..
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 43, in test_case_2
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    transformed, _ = boxcox(df[col])
+                     ^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1147, in boxcox
+    raise ValueError("Data must not be constant.")
+ValueError: Data must not be constant.
+
+======================================================================
+ERROR: test_case_3 (test_0_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 57, in test_case_3
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    transformed, _ = boxcox(df[col])
+                     ^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1150, in boxcox
+    raise ValueError("Data must be positive.")
+ValueError: Data must be positive.
+
+======================================================================
+ERROR: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 68, in test_case_4
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 15, in task_func
+    transformed, _ = boxcox(df[col])
+                     ^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1150, in boxcox
+    raise ValueError("Data must be positive.")
+ValueError: Data must be positive.
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.187s
+
+FAILED (errors=3)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/36的依赖{'matplotlib': '3.10.0', 'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'scipy': '1.15.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/unittest/main.py", line 104, in __init__
+    self.parseArgs(argv)
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/unittest/main.py", line 153, in parseArgs
+    self.createTests()
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/unittest/main.py", line 164, in createTests
+    self.test = self.testLoader.loadTestsFromNames(self.testNames,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/unittest/loader.py", line 207, in loadTestsFromNames
+    suites = [self.loadTestsFromName(name, module) for name in names]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 32
+    </end>
+    ^
+SyntaxError: invalid syntax
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+
+refcode测试失败，BigCodeBench/36的依赖{'matplotlib': '3.10.0', 'numpy': '2.2.1', 'pandas': '2.2.3', 'python': '3.12', 'scipy': '1.15.1'}需要适配
+错误信息:
+Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+stderr:
+EEEE..
+======================================================================
+ERROR: test_case_1 (test_0_0.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 44, in test_case_1
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in task_func
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/frame.py", line 10374, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in <lambda>
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                                        ^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1147, in boxcox
+    raise ValueError("Data must not be constant.")
+ValueError: Data must not be constant.
+
+======================================================================
+ERROR: test_case_2 (test_0_0.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 49, in test_case_2
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in task_func
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/frame.py", line 10374, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in <lambda>
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                                        ^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1147, in boxcox
+    raise ValueError("Data must not be constant.")
+ValueError: Data must not be constant.
+
+======================================================================
+ERROR: test_case_3 (test_0_0.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 63, in test_case_3
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in task_func
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/frame.py", line 10374, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in <lambda>
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                                        ^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1147, in boxcox
+    raise ValueError("Data must not be constant.")
+ValueError: Data must not be constant.
+
+======================================================================
+ERROR: test_case_4 (test_0_0.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 74, in test_case_4
+    transformed_df, fig = task_func(df)
+                          ^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in task_func
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/frame.py", line 10374, in apply
+    return op.apply().__finalize__(self, method="apply")
+           ^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 916, in apply
+    return self.apply_standard()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1063, in apply_standard
+    results, res_index = self.apply_series_generator()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/pandas/core/apply.py", line 1081, in apply_series_generator
+    results[i] = self.func(v, *self.args, **self.kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/test_0_0.py", line 19, in <lambda>
+    transformed_df = df.apply(lambda x: boxcox(x)[0])
+                                        ^^^^^^^^^
+  File "/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/lib/python3.12/site-packages/scipy/stats/_morestats.py", line 1147, in boxcox
+    raise ValueError("Data must not be constant.")
+ValueError: Data must not be constant.
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.023s
+
+FAILED (errors=4)
+
+stdout:
+
+Traceback:
+ Traceback (most recent call last):
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 92, in passTaskTest
+    result = run_tests_in_virtualenv(venv_dir, test_file_path,outputTestInfo=outputTestInfo)
+  File "/home/chenrongyi/codes/VersiBCB_Benchmark/utils/testPassBCB.py", line 33, in run_tests_in_virtualenv
+    raise subprocess.CalledProcessError(
+subprocess.CalledProcessError: Command '['/datanfs2/chenrongyi/conda_env/matplotlib3.10.0_numpy2.2.1_pandas2.2.3_python3.12_scipy1.15.1/bin/python', '-m', 'unittest', 'test_0_0.py']' returned non-zero exit status 1.
+

@@ -1,0 +1,44 @@
+verbose: false
+compute_ppl: true
+return_block_size: true
+logging: true
+em_splitter: surprisal
+
+# max_len: 2147483647
+max_len: 1000000
+chunk_size: 512
+conv_type: mistral-inst
+
+extended_passkey: 1024
+
+model:
+  type: em-llm
+  path:   /datanfs2/chenrongyi/hf/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/3ad372fc79158a2148299e3318516c786aeded6c # mistralai/Mistral-7B-Instruct-v0.2
+  min_block_size: 8
+  max_block_size: 256
+  n_init: 128
+  n_local: 2048
+  n_mem: 512
+  repr_topk: 4
+  max_cached_block: 512  # must be greater than n_mem/min_block_size
+  exc_block_size: 512
+  base: 1000000
+  distance_scale: 1.0
+  surprisal_threshold_gamma: 1.0
+
+  min_free_cpu_memory: 100
+  disk_offload_threshold: 300000
+  vector_offload_threshold: 50000
+
+  similarity_refinement_kwargs:
+    similarity_refinement: false
+    refine_with_buffer: true
+    refine_from_layer: 20
+    similarity_metric: modularity
+
+  contiguity_buffer_kwargs:
+    use_contiguity_buffer: false
+    contiguity_buffer_size: 0.3
+
+  uniform_blocks: true
+  random_topk_blocks: false
